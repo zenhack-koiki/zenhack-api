@@ -7,7 +7,6 @@
 # Ignore bundler config.
 /.bundle
 /vendor
-/config/secrets.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
