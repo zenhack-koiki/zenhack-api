@@ -19,3 +19,5 @@ zenhack-api:
   command: "bundle exec rails server -b 0.0.0.0"
   links:
     - postgres
+  environment:
+    FACEBOOK_APP_TOKEN: "502871253164373|z_K2bagWl9L2qP9y8ps3IrTCTWo"
