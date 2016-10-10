@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @like.session_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @like.image_id %>
+</p>
+
+<p>
+  <strong>Is like:</strong>
+  <%= @like.is_like %>
+</p>
+
+<%= link_to 'Edit', edit_like_path(@like) %> |
+<%= link_to 'Back', likes_path %>
