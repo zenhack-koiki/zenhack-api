@@ -1,6 +1,14 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
 
+  def search
+    @latitude = params[:latitude].to_f
+    @longitude = params[:longitude].to_f
+
+    @images = Image.near( [@latitude, @longitude], 100.0, :units => :km ).limit(10)
+    render :json => @images
+  end
+
   # GET /images
   # GET /images.json
   def index
