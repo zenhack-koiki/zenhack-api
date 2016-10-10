@@ -1,6 +1,14 @@
 class LikesController < ApplicationController
   before_action :set_like, only: [:show, :edit, :update, :destroy]
 
+  # GET /likes/search?session_id=1
+  # GET /likes/search.json?session_id=1
+  def search
+    session_id = params["session_id"]
+    @likes = Like.where(session_id: session_id)
+    render :json => @likes
+  end
+
   # GET /likes
   # GET /likes.json
   def index

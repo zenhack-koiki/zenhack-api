@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :likes
+  resources :likes do
+    collection do
+      get 'search'
+    end
+  end
   resources :images do
     collection do
       get 'search'
